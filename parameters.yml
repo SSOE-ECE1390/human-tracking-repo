@@ -1,0 +1,15 @@
+try:
+  device: 'mps'
+  imgsz: 736
+model:
+  device: 'mps'
+  path: './dataset'      
+  train: 'images/train'
+  val: 'images/val'
+  test: images/test
+  nc: 3
+  names: ['playerTA', 'playerTB', 'ball']
+  imgsz: 640
+generate_training:
+  device: 'mps'
+  imgsz: 736
