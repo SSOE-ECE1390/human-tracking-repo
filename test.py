@@ -5,9 +5,7 @@ from ultralytics import YOLO
 
 if __name__ == '__main__':
 
-    with open('parameters.yml','r') as file:
-        parameters = yaml.safe_load(file)['model']
-    model = YOLO("yolo11l.pt")  # pretrained YOLO11n model
+    model = YOLO("/Users/stonyxiong/github-classroom/SSOE-ECE1390/project/playeriden/exp1/weights/last.pt")  # pretrained YOLO11n model
 
     # Run batched inference on a list of images
     results = model(["figures/frame7.png", "figures/frame8.png"],stream=True)  # return a list of Results objects
