@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
     img_folder = 'data/images'
     lbl_folder = 'data/labels'
-    out_folder = 'data/picswithlabel'
+    out_folder = 'data/plkmean'
     os.makedirs(out_folder, exist_ok=True)
 
     imgs = sorted([f for f in os.listdir(img_folder) if f.lower().endswith(('.png'))])
