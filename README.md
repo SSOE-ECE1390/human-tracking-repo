@@ -126,7 +126,7 @@ You can replace this with your own soccer match video, as long as the camera is 
    ```bash
    git clone <your-repo-url>.git
    cd project
-````
+
 
 2. **Create and activate a virtual environment** (recommended)
 
@@ -351,6 +351,3 @@ You can switch between them by changing the weights file and configuration insid
 * YOLO-based models provided via the [Ultralytics](https://github.com/ultralytics/ultralytics) framework.
 * This project was developed as part of coursework at the University of Pittsburgh.
 
-```
-::contentReference[oaicite:0]{index=0}
-```
