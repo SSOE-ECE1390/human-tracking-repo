@@ -1,0 +1,6 @@
+path: './dataset'      
+train: 'images/train'
+val: 'images/val'
+test: 'images/test'
+nc: 3
+names: ['MCI','BHA','Coach']
