@@ -107,11 +107,12 @@ You can replace this with your own soccer match video, as long as the camera is 
 
 - `auto_generate_dataset/`  
   - `create_frames.py` — extract frames from raw match videos  
-  - `copyfiles_to_dataset.py` — split frames into training / validation sets  
-- `generate_training.py` — generate labels using YOLO, and apply k-means to assign teams  
-- `cleandata.py` — clean noisy / incorrect labels  
-- `draw_box.py` — visualize bounding boxes and team labels on frames  
-- `see_player_individually.py` — visualize all ROIs (crops) for a given frame  
+  - `copyfiles_to_dataset.py` — split frames into training / validation sets
+- `auto_labeling_data/`
+  - `generate_training.py` — generate labels using YOLO, and apply k-means to assign teams  
+  - `cleandata.py` — clean noisy / incorrect labels  
+  - `draw_box.py` — visualize bounding boxes and team labels on frames  
+  - `see_player_individually.py` — visualize all ROIs (crops) for a given frame  
 - `train_model.ipynb` — notebook to train a YOLOv11n model on the generated dataset  
 - `track_real.py` — run the trained model on a new soccer video and track players in real time  
 - `demo.mp4` — example demo video (output of the pipeline)  
