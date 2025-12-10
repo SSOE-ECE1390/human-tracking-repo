@@ -77,7 +77,7 @@ If your browser and GitHub allow inline playback, you should see a demo here:
 If the embedded player does not show up, you can still open the demo video directly:
 
 [▶️ Demo Video (demo.mp4)](demo.mp4)
-[](demo.jpg)
+![](demo.jpg)
 
 ---
 
