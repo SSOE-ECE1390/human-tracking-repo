@@ -177,7 +177,7 @@ In `auto_generate_dataset/`:
 1. **Extract frames**
 
    ```bash
-   python create_frames.py --input your_match_video.mp4 --output frames/
+   python3 create_frames.py --input your_match_video.mp4 --output frames/
    ```
 
    This script will save frames from the video into `frames/`.
@@ -185,7 +185,7 @@ In `auto_generate_dataset/`:
 2. **Split frames into train / validation**
 
    ```bash
-   python copyfiles_to_dataset.py --input frames/ --train train_images/ --val val_images/
+   python3 copyfiles_to_dataset.py --input frames/ --train train_images/ --val val_images/
    ```
 
    * Training set should usually contain **more** images than the validation set.
@@ -199,7 +199,7 @@ We first use a strong YOLO model (e.g., YOLOv11-large) to generate **person boun
 1. **Generate person labels**
 
    ```bash
-   python generate_training.py --generate
+   python3 generate_training.py --generate
    ```
 
    * Uses YOLOv11-large to detect persons in each frame
@@ -208,7 +208,7 @@ We first use a strong YOLO model (e.g., YOLOv11-large) to generate **person boun
 2. **Clean noisy labels**
 
    ```bash
-   python cleandata.py
+   python3 cleandata.py
    ```
 
    * Removes weird / obviously incorrect detections
@@ -219,7 +219,7 @@ We first use a strong YOLO model (e.g., YOLOv11-large) to generate **person boun
    Player ROIs (cropped bounding boxes) are embedded into 3D RGB space (mean color, etc.), then clustered:
 
    ```bash
-   python generate_training.py --kmeans
+   python3 generate_training.py --kmeans
    ```
 
    * Runs k-means clustering on player ROIs
@@ -231,7 +231,7 @@ We first use a strong YOLO model (e.g., YOLOv11-large) to generate **person boun
 4. **Generate final team-aware labels**
 
    ```bash
-   python generate_training.py --generate --use-kmeans
+   python3 generate_training.py --generate --use-kmeans
    ```
 
    * Applies k-means results to label each detected player by team
@@ -277,7 +277,7 @@ Once you have a trained model:
 2. Run:
 
    ```bash
-   python track_real.py --video new_match.mp4 --weights path/to/your_trained_weights.pt
+   python3 track_real.py --video new_match.mp4 --weights path/to/your_trained_weights.pt
    ```
 
    This will:
